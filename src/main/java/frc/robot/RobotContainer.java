@@ -42,6 +42,7 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
+    System.out.println("Hello World");
     // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
     new Trigger(m_exampleSubsystem::exampleCondition)
         .onTrue(new ExampleCommand(m_exampleSubsystem));
