@@ -1,5 +1,8 @@
 package frc.robot.subsystems;
 
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkLowLevel.MotorType;
+
 import edu.wpi.first.math.controller.ArmFeedforward;
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.geometry.Rotation2d;
@@ -33,10 +36,10 @@ public class Arm extends SubsystemBase {
         PIDoutput = PIDoutput + feedforward_output;
         set_voltage(PIDoutput, PIDoutput);
     }
-    public void reset_error {
+    public void reset_error() {
         controller.reset();
     }
-    public void stop_arm {
+    public void stop_arm() {
         left_arm_motor.stopMotor();
         right_arm_motor.stopMotor();
     }
